@@ -39,3 +39,10 @@ Como não há banco de dados, o navegador do usuário fará o processamento anal
    - A função JavaScript/React de processamento dos dados.
    - O código do Componente Visual (Layout, Cards e Gráficos).
 4. Escreva códigos completos, componentizados, com comentários em português explicando a lógica de cálculo.
+
+## 🛡️ [ESTABILIDADE E COMPATIBILIDADE (PREVENÇÃO DE CRASH)]
+Para evitar erros fatais de runtime (tela branca), siga estas regras rígidas:
+1. **Compatibilidade Recharts:** NUNCA renderize componentes cartesianos (`XAxis`, `YAxis`, `CartesianGrid`) dentro de componentes não-cartesianos como `PieChart`. Use renderização condicional se houver uma função auxiliar de gráfico.
+2. **Clonagem Segura:** Ao usar `React.cloneElement`, sempre valide se o elemento alvo existe.
+3. **Named Imports:** Sempre verifique se componentes como `KPICard` estão sendo importados corretamente (Named `{ KPICard }` vs Default) para evitar `undefined component` errors.
+4. **Default Data:** Sempre forneça arrays vazios `[]` ou objetos padrão como fallback para evitar erros de `.map()` ou `.reduce()` em dados nulos.

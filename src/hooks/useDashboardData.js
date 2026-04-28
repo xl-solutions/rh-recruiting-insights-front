@@ -74,6 +74,8 @@ export function useDashboardData() {
           mes: `${mInfo.short}/${currentYear.slice(-2)}`,
           ano: currentYear,
           mes_index: mInfo.order,
+          vagas_abertas_legado: Number(row[1]) || 0,
+          vagas_abertas_mes_vigente: Number(row[2]) || 0,
           vagas_abertas_total: vAbertas,
           vagas_fechadas_total: vFechadas,
           motivos: {
