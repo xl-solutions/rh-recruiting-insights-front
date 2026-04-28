@@ -37,11 +37,11 @@ function doGet(e) {
         tempo_medio_fechamento: sheet.getRange("M10").getValue(),
         tempo_medio_aberto: sheet.getRange("M17").getValue(),
         fontes: {
-          "Indicação": sheet.getRange("P11").getValue(),
-          "Candidatura": sheet.getRange("Q11").getValue(),
-          "Hunting": sheet.getRange("R11").getValue(),
-          "Terceirizada": sheet.getRange("S11").getValue(),
-          "Interna": sheet.getRange("T11").getValue()
+          "Indicação": sheet.getRange("P10").getValue(),
+          "Candidatura": sheet.getRange("Q10").getValue(),
+          "Hunting": sheet.getRange("R10").getValue(),
+          "Terceirizada": sheet.getRange("S10").getValue(),
+          "Interna": sheet.getRange("T10").getValue()
         }
       };
 
